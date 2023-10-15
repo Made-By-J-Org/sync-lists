@@ -15,3 +15,5 @@ good practice:
 - merge master to your branch often
 - git squash
 - https://www.youtube.com/watch?v=HkdAHXoRtos
+
+cf
