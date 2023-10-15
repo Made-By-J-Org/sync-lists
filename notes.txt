@@ -8,6 +8,8 @@ git stash/pop lub komit WIP
 ## merge
 git checkout master
 git merge feature01
+
+
 **
 
 good practice:
