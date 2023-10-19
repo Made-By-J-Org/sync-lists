@@ -15,5 +15,6 @@ git merge feature01
 good practice:
 - commit WIP
 - merge master to your branch often
+
 - git squash
 - https://www.youtube.com/watch?v=HkdAHXoRtos
