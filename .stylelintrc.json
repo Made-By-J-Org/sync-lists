@@ -1,38 +1,49 @@
 {
-  "plugins": ["stylelint-scss", "@namics/stylelint-bem"],
+  "plugins": [
+    "stylelint-scss",
+    "@namics/stylelint-bem"
+  ],
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-idiomatic-order",
     "stylelint-config-prettier-scss"
   ],
   "rules": {
-  "font-family-name-quotes": null,
-   "plugin/stylelint-bem-namics": {
+    "font-family-name-quotes": null,
+    "plugin/stylelint-bem-namics": {
       "patternPrefixes": [],
       "helperPrefixes": []
     },
     "scss/at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["tailwind", "layer"]
+        "ignoreAtRules": [
+          "layer"
+        ]
       }
     ],
     "selector-class-pattern": null
-
   },
   "overrides": [
     {
       "customSyntax": "postcss-scss",
-      "files": ["**/*.scss"]
+      "files": [
+        "**/*.scss"
+      ]
     },
     {
       "customSyntax": "@stylelint/postcss-css-in-js",
-      "files": ["**/*.jsx", "**/*.tsx"],
+      "files": [
+        "**/*.jsx",
+        "**/*.tsx"
+      ],
       "rules": {
         "function-name-case": [
           "lower",
           {
-            "ignoreFunctions": ["/.*/"]
+            "ignoreFunctions": [
+              "/.*/"
+            ]
           }
         ],
         "selector-class-pattern": [
@@ -41,9 +52,15 @@
         "value-keyword-case": [
           "lower",
           {
-            "ignoreFunctions": ["/.*/"],
-            "ignoreKeywords": ["/.*/"],
-            "ignoreProperties": ["/.*/"]
+            "ignoreFunctions": [
+              "/.*/"
+            ],
+            "ignoreKeywords": [
+              "/.*/"
+            ],
+            "ignoreProperties": [
+              "/.*/"
+            ]
           }
         ]
       }
