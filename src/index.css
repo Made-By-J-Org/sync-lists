@@ -1,21 +1,13 @@
-/* If you don't plan to use TailwindCSS in your project, you can remove these imports */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .app {
   text-align: center;
+  border: 1px solid red;
 }
 
 
 /* @media (prefers-reduced-motion: no-preference) { */
-
 /*  .app-logo { */
-
 /*    animation: app-logo-spin infinite 20s linear; */
-
 /*  } */
-
 /* } */
 
 .app-header {
