@@ -17,9 +17,11 @@
     "dev": "vite",
     "build": "vite build --emptyOutDir",
     "serve": "vite preview",
+    "lint": "lint:eslint && lint:stylelint",
+    "fix": "fix:eslint && fix:stylelint",
     "lint:eslint": "eslint move --ext .js,.jsx",
-    "fix:eslint": "eslint --fix  move --ext .js,.jsx",
     "lint:stylelint": "stylelint **/*.{css,scss,jsx}",
+    "fix:eslint": "eslint --fix  move --ext .js,.jsx",
     "fix:stylelint": "stylelint --fix  src/**/*.{css, scss,jsx}",
     "test": "jest"
   },
@@ -28,10 +30,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
-    "react-router-dom": "^6.3.0",
-    "sass": "^1.54.5"
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
+    "sass": "^1.54.5",
     "@babel/core": "^7.18.13",
     "@namics/stylelint-bem": "^7.0.0",
     "@stylelint/postcss-css-in-js": "^0.38.0",
