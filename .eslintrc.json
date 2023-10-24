@@ -1,5 +1,17 @@
 {
   "root": true,
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
   "env": {
     "browser": true,
     "es2021": true,
@@ -17,7 +29,8 @@
     "plugin:import/recommended",
     "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "prettier",
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
