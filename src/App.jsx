@@ -1,7 +1,9 @@
+import Container from "./components/Container/Container";
+
 const App = () => (
-  <div className="app">
-    test
-  </div>
+  <Container title="Tasks List">
+    <div>test</div>
+  </Container>
 );
 
 export default App;
