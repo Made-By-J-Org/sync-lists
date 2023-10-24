@@ -2,7 +2,7 @@ pnpm-debug.log*
 node_modules
 dist
 public
-
+notes.md
 # Logs
 logs
 *.log
