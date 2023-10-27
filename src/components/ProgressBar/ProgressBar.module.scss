@@ -1,0 +1,27 @@
+@import "src/styles/variables.scss";
+
+.container {
+  width: 100%;
+
+  > progress {
+    appearance: none;
+    -webkit-appearance: none;
+
+    height: 100px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &::-webkit-progress-bar {
+      background-color: $progress-bar-background;
+      color: $progress-bar-value;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    &::-webkit-progress-value {
+      background-color: $progress-bar-background;
+      color: $progress-bar-value;
+      background-size: 40px 20px;
+    }
+  }
+}
