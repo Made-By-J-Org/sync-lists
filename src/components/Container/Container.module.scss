@@ -1,13 +1,23 @@
 @import "src/styles/breakpoints";
+@import "src/styles/variables";
 
-.container {
-  border: 1px solid blue;
-  width: 100%;
+.wrapper {
+  background-color: $color-default;
+
+  width: auto;
   height: auto;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 5px;
+
+  > h2 {
+    line-height: 0;
+  }
 
   //@include tablet-max {
   //  border: 1px solid red;
   //}
+}
+
+.content {
+  border: 1px solid green
 }
