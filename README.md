@@ -8,11 +8,10 @@ required when we try to create something for 'the show' is too much and working
 with repo as a package gives me good starting point when it comes to removing
 unnecessary things. So, my assumptions are:
 
-- No TS per-se. We write JS.
-  - Why? TS will be used as JSDoc comments, which became
-    more and more popular solution when writing packages. It'll still give type
-    annotations when package is used (and static analysis within IDE still
-    works) but will not require extra TS transpilation step. Which is good.
+- Let's go with TS.
+  - Why? I hopped to use TS only as JSDocs but configuration will take another
+    evening. So, I returned to TS cause you know, we use TS. DAMN YOU
+    TYPESCRIPT!
 - No CSS packages, only preprocessor (SCSS).
   - Why? Cause it does not make any sense. If you need any css packages for this
     kind of project then think again and then don't install it. Nobody proven to
