@@ -22,6 +22,8 @@ unnecessary things. So, my assumptions are:
 - Storybook and visual testing
   - Why? Because it's very helpful tool and I believe that in this case this is
     how we should also test it. And Cypress would be an overkill.
+- Browsers support:
+  - chrome, edge, FF, safari. At least progress bar was tested on these.
 
 ### Side note.
 

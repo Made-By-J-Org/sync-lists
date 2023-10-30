@@ -5,7 +5,7 @@ import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 const App = (): React.ReactElement => (
   <Container title="Tasks List">
-    <ProgressBar/>
+    <ProgressBar value={30}/>
   </Container>
 );
 

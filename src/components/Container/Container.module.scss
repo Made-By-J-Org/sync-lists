@@ -1,13 +1,14 @@
 @import "src/styles/breakpoints";
-@import "src/styles/variables";
+@import "src/styles/colors";
 
 .wrapper {
-  background-color: $color-default;
+  background-color: $color-default-light;
 
   width: auto;
   height: auto;
   margin: 10px;
   padding: 5px;
+  border-radius: 5px;
 
   > h2 {
     line-height: 0;
@@ -19,5 +20,5 @@
 }
 
 .content {
-  border: 1px solid green
+  //border: 1px solid green
 }

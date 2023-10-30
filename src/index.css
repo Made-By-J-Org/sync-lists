@@ -3,7 +3,9 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #EEE;
   font-family: -apple-system, 'Lato', sans-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: normal;

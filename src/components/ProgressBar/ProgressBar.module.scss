@@ -1,27 +1,61 @@
-@import "src/styles/variables.scss";
+@import "src/styles/colors.scss";
+@import "src/styles/fonts.scss";
 
-.container {
+// this was not as easy as I thought
+.container { // @TODO container to be removed
+  $color: $progress-bar-value;
+  $background-color: $progress-bar-background;
+
+  $border-radius: 15px;
+  $height: 30px;
+
   width: 100%;
 
-  > progress {
-    appearance: none;
-    -webkit-appearance: none;
+  // display value within progress bar
+  > span {
+    position: relative;
+    font-size: $font-size-xl;
+    top: calc((-1 * $height / 2) - ($font-size-xl / 2) - 2px); // -2px for extra centering
+    color: $font-color-light;
+  }
 
-    height: 100px;
-    box-sizing: border-box;
+  > progress {
     width: 100%;
+    height: $height;
+    border-radius: $border-radius;
+    background: $background-color; // for FF
+
+
+    /* RESETS DEFAULT STYLES */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    box-sizing: border-box;
+    border: 0; // for FF
+    /* END RESET STYLES*/
+
+    /* WEBKIT BROWSERS - CHROME, OPERA AND SAFARI */
+    &::-webkit-progress-inner-element {
+      appearance: none;
+      border: none;
+    }
 
     &::-webkit-progress-bar {
-      background-color: $progress-bar-background;
-      color: $progress-bar-value;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      background-color: $background-color;
+      border-radius: $border-radius;
     }
 
     &::-webkit-progress-value {
-      background-color: $progress-bar-background;
-      color: $progress-bar-value;
-      background-size: 40px 20px;
+      background-color: $color;
+      border-radius: $border-radius;
+      color: $color;
+    }
+
+    /* MOZILLA FIREFOX */
+    &::-moz-progress-bar {
+      background-color: $color;
+      border-radius: $border-radius;
     }
   }
 }
