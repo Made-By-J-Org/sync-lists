@@ -9,11 +9,14 @@ interface ProgressBarProps {
 const ProgressBar = ({value}: ProgressBarProps): React.ReactElement => {
   return (
     <div className={styles.container}>
-      <progress value={value} max="100"
-                className={styles.customProgress}/>
-      <span
-        style={{left: `${value - 5}%`}}
-      >{value}%</span>
+      <progress
+        className={styles.customProgress}
+        value={value}
+        max="100"
+      />
+      <span style={{left: `${value - 5}%`}}>
+        {value}%
+      </span>
     </div>
   );
 };

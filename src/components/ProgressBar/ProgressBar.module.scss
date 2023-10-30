@@ -1,8 +1,7 @@
 @import "src/styles/colors.scss";
 @import "src/styles/fonts.scss";
 
-// this was not as easy as I thought
-.container { // @TODO container to be removed
+.container {
   $color: $progress-bar-value;
   $background-color: $progress-bar-background;
 

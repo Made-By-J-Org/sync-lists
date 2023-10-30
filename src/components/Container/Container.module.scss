@@ -1,12 +1,13 @@
 @import "src/styles/breakpoints";
 @import "src/styles/colors";
 
-.wrapper {
+.containerWrapper {
   background-color: $color-default-light;
 
   width: auto;
   height: auto;
-  padding: 50px 50px 40px;
+
+  padding: 50px 25px 40px;
   margin: 15px;
   border-radius: 15px;
   border: 2px solid $color-default-grey;
@@ -14,12 +15,9 @@
   > h2 {
     line-height: 0;
   }
-
-  //@include tablet-max {
-  //  border: 1px solid red;
-  //}
 }
 
-.content {
-  //border: 1px solid green
+.header {
+  max-width: 97%;
+  margin: 0 auto;
 }

@@ -1,12 +1,12 @@
-interface SchemaTask {
+export interface TaskSchema {
   description: string,
   value: number,
   checked: boolean
 }
 
-interface ApiSchema {
+export interface ApiSchema {
   name: string;
-  tasks: Array<SchemaTask>
+  tasks: Array<TaskSchema>
 }
 
 const apiMock: Array<ApiSchema> = [

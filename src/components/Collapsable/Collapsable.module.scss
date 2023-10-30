@@ -1,20 +1,13 @@
-// Custom marker
 // I'd love to do it with before and after and proper unicode icons
 // but text next to icon prevents me from doing it...
 //summary::after {
 //  content: "\02C4 Show";
-//  font-size: 1.5rem;
-//  font-weight: 400;
-//  line-height: 1;
-//  margin-right: 1rem;
-//  cursor: pointer;
 //}
-
-// Custom marker
 //summary::after {
 //  content: "\02C5 Hide";
 //}
 
+@import '../../styles/colors';
 
 details {
   cursor: pointer;
@@ -42,31 +35,29 @@ details {
     content: "";
     display: none;
   }
-
-  .content {
-    border: 1px solid red;
-  }
 }
 
 // Collapsible OPEN
 details[open] {
   .content {
     animation-name: fold-out;
-    animation-duration: .6s;
+    animation-duration: .2s;
   }
 }
 
+// set class when open
 .rotateIcon {
   > svg {
     transform: rotate(180deg);
   }
 }
 
-.showHideText {
+.positionText {
   width: 55px; // to stop text and icon from moving from right side.
+  font-weight: lighter;
 }
 
-// align icons...
+// align icon...
 span:first-child {
   > svg {
     position: relative;
@@ -74,7 +65,11 @@ span:first-child {
   }
 }
 
-// Fake it 'til you make it animations
+.content {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
 @keyframes fold-out {
   0% {
     opacity: 0;
@@ -83,7 +78,7 @@ span:first-child {
 
   100% {
     opacity: 1;
-    margin-top: 0;
+    margin-top: 15px;
   }
 }
 

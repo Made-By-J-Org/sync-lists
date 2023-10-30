@@ -1,9 +1,11 @@
+@import '../../styles/colors';
+
 .listsWrapper {
-  border: 1px solid grey;
+  border: 1px solid $color-default-grey;
   border-radius: 15px;
 
   > * {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $color-default-grey;
   }
 
   > :first-child {

@@ -1,20 +1,25 @@
-import styles from './Container.module.scss';
 import React from "react";
+
+import styles from './Container.module.scss';
 
 interface ContainerProps {
   title: string;
-  children?: React.ReactNode;
+  header: React.ReactNode;
+  content: React.ReactNode;
 }
 
-const Container = ({title, children}: ContainerProps): React.ReactElement => (
-  <div className={styles.wrapper}>
-    <h2>{title}</h2>
-
-    {children && (
-      <div className={styles.content}>
-        {children}
-      </div>
-    )}
+const Container = (
+  {
+    title,
+    header,
+    content
+  }: ContainerProps): React.ReactElement => (
+  <div className={styles.containerWrapper}>
+    <div className={styles.header}>
+      <h2>{title}</h2>
+      {header}
+    </div>
+    {content}
   </div>
 );
 

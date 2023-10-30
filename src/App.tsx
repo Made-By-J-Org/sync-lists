@@ -9,10 +9,11 @@ const App = (): React.ReactElement => {
   // load data
 
   return (
-    <Container title="Tasks List">
-      <ProgressBar value={30}/>
-      <Lists/>
-    </Container>
+    <Container
+      title="Tasks Collapsable"
+      header={<ProgressBar value={30}/>}
+      content={<Lists/>}
+    />
   );
 }
 
