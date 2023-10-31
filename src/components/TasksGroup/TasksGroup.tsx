@@ -1,7 +1,7 @@
 import React from "react";
 
 import Task from "../Task/Task";
-import {TaskSchema} from "../../api/api.mock";
+import {TaskSchema} from "../../store/atoms";
 
 import styles from "./TasksGroup.module.scss";
 

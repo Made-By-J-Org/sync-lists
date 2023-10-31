@@ -2,7 +2,7 @@ import React from 'react';
 
 import {IconChevronDown, IconList} from '../Icons';
 import TasksGroup from "../TasksGroup/TasksGroup";
-import {ApiSchema} from "../../api/api.mock";
+import {ApiSchema} from "../../store/atoms";
 
 import styles from './Collapsable.module.scss';
 

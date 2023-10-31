@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import {TaskSchema} from "../../api/api.mock";
+import {TaskSchema} from "../../store/atoms";
 
 import styles from "./Task.module.scss";
 
@@ -9,7 +9,7 @@ interface TaskProps {
 }
 
 const Task = ({task}: TaskProps): React.ReactElement => {
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(task.checked);
   return (
     <div
       data-testid='task-wrapper'
