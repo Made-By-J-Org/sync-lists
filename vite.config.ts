@@ -4,11 +4,14 @@
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 import eslint from 'vite-plugin-eslint';
+import jotaiDebugLabel from 'jotai/babel/plugin-debug-label'
+import jotaiReactRefresh from 'jotai/babel/plugin-react-refresh'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
+      babel: {plugins: [jotaiDebugLabel, jotaiReactRefresh]},
       include: /\.(js|jsx|ts|tsx)$/,
       jsxRuntime: 'classic',
       fastRefresh: false // turn off for tests to run
