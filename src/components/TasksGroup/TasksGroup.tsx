@@ -7,15 +7,22 @@ import styles from "./TasksGroup.module.scss";
 
 interface TasksGroupProps {
   tasks: Array<TaskSchema>;
+  tasksListId: string;
 }
 
-const TasksGroup = ({tasks}: TasksGroupProps): React.ReactElement =>
-  <div className={styles.tasksGroupWrapper}>
-    {tasks.map((task: TaskSchema, i: number) => (
-      <Task
-        key={i}
-        task={task}/>
-    ))}
-  </div>
-
+const TasksGroup = ({
+                      tasks,
+                      tasksListId
+                    }: TasksGroupProps): React.ReactElement => {
+  return (
+    <div className={styles.tasksGroupWrapper}>
+      {tasks.map((task: TaskSchema, i: number) => (
+        <Task
+          key={i}
+          task={task}
+          tasksListId={tasksListId}/>
+      ))}
+    </div>
+  )
+}
 export default TasksGroup;

@@ -2,18 +2,17 @@ import React from 'react';
 
 import {IconChevronDown, IconList} from '../Icons';
 import TasksGroup from "../TasksGroup/TasksGroup";
-import {ApiSchema} from "../../store/atoms";
+import {TaskGroupSchema} from "../../store/atoms";
 
 import styles from './Collapsable.module.scss';
 
 interface CollapsableProps {
-  tasksList: ApiSchema;
+  tasksList: TaskGroupSchema;
 }
 
 const Collapsable = ({tasksList}: CollapsableProps): React.ReactElement => {
   // due to 'show/hide' text I need a state.
   const [open, setOpen] = React.useState(false);
-
   return (
     <details
       onToggle={() => setOpen(prev => !prev)}
@@ -38,7 +37,7 @@ const Collapsable = ({tasksList}: CollapsableProps): React.ReactElement => {
       </summary>
 
       <div className={styles.content}>
-        <TasksGroup tasks={tasksList.tasks}/>
+        <TasksGroup tasksListId={tasksList.id} tasks={tasksList.tasks}/>
       </div>
     </details>
   );
