@@ -85,6 +85,7 @@
         ]
       }
     ],
+    "@typescript-eslint/ban-ts-comment": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
