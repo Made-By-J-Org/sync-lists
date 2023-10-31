@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Task component > match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="_taskWrapper_416c64"
+    data-testid="task-wrapper"
+  >
+    <span
+      class="
+          
+          _checkbox_416c64
+        "
+      data-testid="task-wrapper-checkbox"
+    />
+    <span>
+      Sample task
+    </span>
+  </div>
+</DocumentFragment>
+`;

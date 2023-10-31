@@ -31,6 +31,12 @@ I've planned to treat this repo as an example for my mentees to show them how
 work should be done. But as always something, in this case (a) time, (b) I'm
 sick. All will be done till monday morning.
 
+#### Tests
+
+No idea why but vitest does not recognize computed classNames. That's why I'm
+using this king of workaround
+`expect(taskWrapperCheckbox.getAttribute('class')).not.toMatch(/checkboxSelected/gi)`
+
 ## THE PLAN
 
 More or less this will be the plan of the things that I need to do. Every part
