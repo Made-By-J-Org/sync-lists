@@ -15,7 +15,10 @@ const Collapsable = ({tasksList}: CollapsableProps): React.ReactElement => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <details onToggle={() => setOpen(prev => !prev)}>
+    <details
+      onToggle={() => setOpen(prev => !prev)}
+      data-testid='collapsible-details'
+    >
       <summary>
         <span>
           <IconList/>
