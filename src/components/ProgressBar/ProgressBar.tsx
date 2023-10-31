@@ -1,21 +1,23 @@
 import React from "react";
+import {useAtomValue} from "jotai";
+
+import {progressAtom} from "../../store/atoms";
 
 import styles from './ProgressBar.module.scss';
 
-interface ProgressBarProps {
-  value: number;
-}
+const ProgressBar = (): React.ReactElement => {
+  const progressValue = useAtomValue(progressAtom)
+  console.log({progressValue})
 
-const ProgressBar = ({value}: ProgressBarProps): React.ReactElement => {
   return (
     <div className={styles.container}>
       <progress
         className={styles.customProgress}
-        value={value}
+        value={progressValue}
         max="100"
       />
-      <span style={{left: `${value - 5}%`}}>
-        {value}%
+      <span style={{left: `${progressValue - 5}%`}}>
+        {progressValue}%
       </span>
     </div>
   );

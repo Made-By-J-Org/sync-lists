@@ -24,7 +24,7 @@ export interface TasksSchema extends Array<TaskGroupSchema> {
 
 export const progressAtom = atom(0)
 const calculateProgress = (lists: TasksSchema | never[]): number => {
-  return 10;
+  return 20;
 }
 // no mechanism for caching
 export const listAsyncAtom: WritableAtom<Promise<TasksSchema | never[]>, [args: {
