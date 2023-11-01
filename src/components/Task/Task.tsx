@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useSetAtom} from "jotai";
 
 import {
-  listAsyncAtom,
+  listsAsyncAtom,
   TaskSchema
 } from "../../store/atoms";
 
@@ -15,20 +15,27 @@ interface TaskProps {
 
 const Task = ({task, tasksListId}: TaskProps): React.ReactElement => {
   const [checked, setTaskChecked] = useState(task.checked);
-  const setTaskValue = useSetAtom(listAsyncAtom)
+  const setTaskValue = useSetAtom(listsAsyncAtom)
 
-  const setTask = (): void => {
-    setTaskChecked(prev => {
-      setTaskValue({tasksListId: tasksListId, task: {...task, checked: !prev}})
-      return !prev
+  const changeCheckedState = (): void => {
+    setTaskChecked((checkedStatus) => {
+      const newTaskState = {...task, checked: !checkedStatus}
+      const taskValuePayload = {
+        tasksListId: tasksListId,
+        task: newTaskState
+      }
+      setTaskValue(taskValuePayload)
+
+      return !checkedStatus
     })
+
   }
 
   return (
     <div
       data-testid='task-wrapper'
       className={styles.taskWrapper}
-      onClick={setTask}
+      onClick={changeCheckedState}
     >
       <span
         data-testid='task-wrapper-checkbox'
