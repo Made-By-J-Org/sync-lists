@@ -1,9 +1,9 @@
 import {atom, WritableAtom} from "jotai";
 import {loadable} from "jotai/utils"
-// @ts-ignore
 import {v4 as uuidv4} from 'uuid';
 
 import {API_ENDPOINT} from "../constants";
+import {calculateProgressValue} from "../helpers/calculateProgressValue";
 
 export interface TaskSchema {
   id: string,
@@ -18,26 +18,17 @@ export interface TaskGroupSchema {
   tasks: Array<TaskSchema>
 }
 
-export interface TasksSchema extends Array<TaskGroupSchema> {
-  id: string
-}
+export const progressAtom = atom<number>(0)
 
-export const progressAtom = atom(0)
-const calculateProgress = (lists: TasksSchema | never[]): number => {
-  return 20;
-}
 // no mechanism for caching
-export const listAsyncAtom: WritableAtom<Promise<TasksSchema | never[]>, [args: {
+export const listsAsyncAtom: WritableAtom<Promise<Array<TaskGroupSchema> | never[]>, [args: {
   tasksListId: string,
   task: TaskSchema
-}], Promise<TasksSchema>> = atom(
+}], Promise<Array<TaskGroupSchema>>> = atom(
   async () => {
     const res: Response = await fetch(API_ENDPOINT)
-    const lists: TasksSchema = await res.json();
+    const lists: Array<TaskGroupSchema> = await res.json();
     if (lists && lists.length) {
-      // const calculatedProgress = calculateProgress(lists)
-      // set(progressAtom, calculatedProgress)
-      //
       lists.forEach((item) => {
         item.id = uuidv4();
         item.tasks.forEach(task => {
@@ -51,15 +42,16 @@ export const listAsyncAtom: WritableAtom<Promise<TasksSchema | never[]>, [args: 
     return []
   },
   async (get, set, args: { tasksListId: string, task: TaskSchema }) => {
-    const lists: TasksSchema = await get(listAsyncAtom) as TasksSchema
+    const lists: Array<TaskGroupSchema> = await get(listsAsyncAtom) as Array<TaskGroupSchema>
     const listIndex = lists.findIndex(tasksList => tasksList.id === args.tasksListId)
-    const tasksList = lists[listIndex].tasks
-    lists[listIndex].tasks = [...tasksList, args.task]
-    const calculatedProgress = calculateProgress(lists)
-    set(progressAtom, calculatedProgress)
+    const updatedTasksList = lists[listIndex].tasks.map(task => {
+      return task.id === args.task.id ? args.task : task;
+    })
+    lists[listIndex].tasks = [...updatedTasksList]
+    set(progressAtom, calculateProgressValue(lists))
     return lists;
   }
 )
 
 // one of jotai mechanism to handle async data
-export const loadableFetchDataAsyncAtom = loadable(listAsyncAtom)
+export const loadableFetchDataAsyncAtom = loadable(listsAsyncAtom)
