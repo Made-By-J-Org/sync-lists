@@ -11,7 +11,7 @@ const App = (): React.ReactElement => {
     <Provider>
       <Container
         title="Tasks Collapsable"
-        header={<ProgressBar value={30}/>}
+        header={<ProgressBar/>}
         content={<Lists/>}
       />
     </Provider>
