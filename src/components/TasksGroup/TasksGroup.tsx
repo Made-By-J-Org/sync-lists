@@ -10,10 +10,11 @@ interface TasksGroupProps {
   tasksListId: string;
 }
 
-const TasksGroup = ({
-                      tasks,
-                      tasksListId
-                    }: TasksGroupProps): React.ReactElement => {
+const TasksGroup = (
+  {
+    tasks,
+    tasksListId
+  }: TasksGroupProps): React.ReactElement => {
   return (
     <div className={styles.tasksGroupWrapper}>
       {tasks.map((task: TaskSchema, i: number) => (
