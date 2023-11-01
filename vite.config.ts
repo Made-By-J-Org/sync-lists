@@ -28,5 +28,6 @@ export default defineConfig({
   },
   server: {
     cors: false
-  }
+  },
+  base: "https://made-by-j-org.github.io/sync-lists/",
 });
