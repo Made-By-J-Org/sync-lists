@@ -4,6 +4,8 @@ import {v4 as uuidv4} from 'uuid';
 
 import {API_ENDPOINT} from "../constants";
 import {calculateProgressValue} from "../helpers/calculateProgressValue";
+import {getTasksLists} from "../api/getTasksLists";
+import {addIDsToListElements} from "../helpers/addIDsToListElements";
 
 export interface TaskSchema {
   id: string,
@@ -26,20 +28,10 @@ export const listsAsyncAtom: WritableAtom<Promise<Array<TaskGroupSchema> | never
   task: TaskSchema
 }], Promise<Array<TaskGroupSchema>>> = atom(
   async () => {
-    const res: Response = await fetch(API_ENDPOINT)
-    const lists: Array<TaskGroupSchema> = await res.json();
-    if (lists && lists.length) {
-      lists.forEach((item) => {
-        item.id = uuidv4();
-        item.tasks.forEach(task => {
-          task.id = uuidv4()
-          return task;
-        })
-        return item
-      })
-      return lists
-    }
-    return []
+    const lists = await getTasksLists()
+    return lists.length
+      ? addIDsToListElements(lists)
+      : []
   },
   async (get, set, args: { tasksListId: string, task: TaskSchema }) => {
     const lists: Array<TaskGroupSchema> = await get(listsAsyncAtom) as Array<TaskGroupSchema>
