@@ -1,13 +1,26 @@
-import React from "react";
-import {useAtomValue} from "jotai";
+import React, {useEffect} from "react";
+import {useAtom, useAtomValue} from "jotai";
 
-import {progressAtom} from "../../store/atoms";
+import {
+  loadableFetchDataAsyncAtom,
+  progressAtom,
+  TaskGroupSchema
+} from "../../store/atoms";
+import {calculateProgressValue} from "../../helpers/calculateProgressValue";
 
 import styles from './ProgressBar.module.scss';
 
 const ProgressBar = (): React.ReactElement => {
-  const progressValue = useAtomValue(progressAtom)
-  console.log({progressValue})
+  const data = useAtomValue(loadableFetchDataAsyncAtom)
+  const [progressValue, setProgressValue] = useAtom(progressAtom)
+
+  // init progressValue after data fetch
+  // this effect will run once due to the fact that 'data' update does not cause rerender
+  useEffect(() => {
+    if (data.state === 'hasData') {
+      setProgressValue(calculateProgressValue(data.data as Array<TaskGroupSchema>))
+    }
+  }, [data, setProgressValue])
 
   return (
     <div className={styles.container}>
