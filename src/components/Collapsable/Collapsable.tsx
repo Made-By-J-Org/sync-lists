@@ -37,7 +37,11 @@ const Collapsable = ({tasksList}: CollapsableProps): React.ReactElement => {
       </summary>
 
       <div className={styles.content}>
-        <TasksGroup tasksListId={tasksList.id} tasks={tasksList.tasks}/>
+        {
+          tasksList.tasks && tasksList.tasks.length
+          ? <TasksGroup tasksListId={tasksList.id} tasks={tasksList.tasks}/>
+          : <div>No tasks</div>
+        }
       </div>
     </details>
   );
