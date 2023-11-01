@@ -18,7 +18,7 @@ const Task = ({task, tasksListId}: TaskProps): React.ReactElement => {
   const setTaskValue = useSetAtom(listsAsyncAtom)
 
   const changeCheckedState = (): void => {
-    setTaskChecked((checkedStatus) => {
+        setTaskChecked((checkedStatus) => {
       const newTaskState = {...task, checked: !checkedStatus}
       const taskValuePayload = {
         tasksListId: tasksListId,

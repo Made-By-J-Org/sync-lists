@@ -1,10 +1,9 @@
-@import "src/styles/colors.scss";
-@import "src/styles/fonts.scss";
+@import "src/styles/colors";
+@import "src/styles/fonts";
 
 .container {
   $color: $progress-bar-value;
   $background-color: $progress-bar-background;
-
   $border-radius: 15px;
   $height: 30px;
 
@@ -13,9 +12,9 @@
   // display value within progress bar
   > span {
     position: relative;
-    font-size: $font-size-xl;
     top: calc((-1 * $height / 2) - ($font-size-xl / 2) - 2px); // -2px for extra centering
     color: $font-color-light;
+    font-size: $font-size-xl;
   }
 
   > progress {
@@ -36,8 +35,8 @@
 
     /* WEBKIT BROWSERS - CHROME, OPERA AND SAFARI */
     &::-webkit-progress-inner-element {
-      appearance: none;
       border: none;
+      appearance: none;
     }
 
     &::-webkit-progress-bar {

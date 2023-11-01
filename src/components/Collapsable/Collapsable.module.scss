@@ -18,8 +18,8 @@ details {
   user-select: none;
 
   &:not([open]) {
-    animation-name: fold-in;
     animation-duration: .2s;
+    animation-name: fold-in;
   }
 
   summary {
@@ -32,16 +32,16 @@ details {
   // Disable browser default marker
   summary::-webkit-details-marker,
   summary::marker {
-    content: "";
     display: none;
+    content: "";
   }
 }
 
 // Collapsible OPEN
 details[open] {
   .content {
-    animation-name: fold-out;
     animation-duration: .2s;
+    animation-name: fold-out;
   }
 }
 
@@ -72,13 +72,13 @@ span:first-child {
 
 @keyframes fold-out {
   0% {
-    opacity: 0;
     margin-top: -1rem;
+    opacity: 0;
   }
 
   100% {
-    opacity: 1;
     margin-top: 15px;
+    opacity: 1;
   }
 }
 

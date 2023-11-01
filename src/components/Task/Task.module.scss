@@ -10,9 +10,9 @@
 }
 
 .checkbox {
-  display: inline-block;
   position: relative;
   top: 4px;
+  display: inline-block;
   width: 14px;
   height: 14px;
   border: 1px solid $checkbox-border-color;
@@ -24,11 +24,11 @@
   background: $checkbox-checked-color;
 }
 
-.checkboxSelected:after {
-  content: '\2713';
-  color: white;
+.checkboxSelected::after {
   position: relative;
   top: -3px;
+  color: white;
+  content: '\2713';
 }
 
 
