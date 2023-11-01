@@ -1,8 +1,6 @@
 import {atom, WritableAtom} from "jotai";
 import {loadable} from "jotai/utils"
-import {v4 as uuidv4} from 'uuid';
 
-import {API_ENDPOINT} from "../constants";
 import {calculateProgressValue} from "../helpers/calculateProgressValue";
 import {getTasksLists} from "../api/getTasksLists";
 import {addIDsToListElements} from "../helpers/addIDsToListElements";
