@@ -26,7 +26,8 @@
 
 .checkboxSelected::after {
   position: relative;
-  top: -3px;
+  top: -2px;
+  left: 2px;
   color: white;
   content: '\2713';
 }
