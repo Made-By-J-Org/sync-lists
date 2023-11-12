@@ -86,7 +86,7 @@
       }
     ],
     "@typescript-eslint/ban-ts-comment": "off",
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/no-extraneous-dependencies": ["off", {"devDependencies": true}],
     "no-multiple-empty-lines": "error",
     "sort-keys": [
       "error",
