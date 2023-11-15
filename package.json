@@ -2,17 +2,7 @@
   "name": "starter-vite-react",
   "private": true,
   "version": "1.0.0",
-  "description": "Opinionated Vite starter template with ESLint, Prettier, Stylelint and more.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fabgrel10/vite-react-starter"
-  },
-  "keywords": [
-    "vite",
-    "react",
-    "starter",
-    "template"
-  ],
+  "description": "XYZ @TODO",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -27,7 +17,8 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "jotai": "^2.5.0",
+    "@preact/signals-react": "^1.3.6",
+    "jotai": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
@@ -35,13 +26,13 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
     "@babel/core": "^7.18.13",
     "@namics/stylelint-bem": "^7.0.0",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@testing-library/dom": "^8.17.1",
     "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@types/uuid": "^9.0.6",

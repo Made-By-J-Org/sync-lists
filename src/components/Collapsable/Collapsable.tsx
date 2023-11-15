@@ -13,13 +13,14 @@ interface CollapsableProps {
 const Collapsable = ({tasksList}: CollapsableProps): React.ReactElement => {
   // due to 'show/hide' text I need a state.
   const [open, setOpen] = React.useState(false);
+
   return (
     <details
       onToggle={() => setOpen(prev => !prev)}
       data-testid='collapsible-details'
     >
       <summary>
-        <span>
+        <span >
           <IconList/>
           {' '}
           <b>{tasksList.name}</b>
