@@ -1,10 +1,8 @@
 import React, {useState} from "react";
-import {useSetAtom} from "jotai";
 
 import {
-  listsAsyncAtom,
   TaskSchema
-} from "../../store/atoms";
+} from "../../store/tasks.signals";
 
 import styles from "./Task.module.scss";
 
@@ -15,7 +13,7 @@ interface TaskProps {
 
 const Task = ({task, tasksListId}: TaskProps): React.ReactElement => {
   const [checked, setTaskChecked] = useState(task.checked);
-  const setTaskValue = useSetAtom(listsAsyncAtom)
+  // const setTaskValue = useSetAtom(listsAsyncAtom)
 
   const changeCheckedState = (): void => {
         setTaskChecked((checkedStatus) => {
@@ -24,7 +22,7 @@ const Task = ({task, tasksListId}: TaskProps): React.ReactElement => {
         tasksListId: tasksListId,
         task: newTaskState
       }
-      setTaskValue(taskValuePayload)
+      // setTaskValue(taskValuePayload)
 
       return !checkedStatus
     })

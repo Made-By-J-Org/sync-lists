@@ -23,6 +23,7 @@ effect(() => {
     dataFetchStatusSignal.value.loading = false
   }
 })
+
 const App = (): React.ReactElement => {
   const fetchTasksListData = async (): Promise<void> => {
     const lists: Array<TaskGroupSchema> = await getTasksLists()

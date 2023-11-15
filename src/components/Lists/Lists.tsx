@@ -15,6 +15,7 @@ const Lists = (): React.ReactElement => {
   if (data.state === 'hasError') return <div>{typeof data.error === 'string' ? data.error : 'Sorry, something went wrong'}</div>
   if (data.state === 'loading') return <Loader message="One more sec..."/>
 
+  [1,2].map(item => item) // 1, 2
   return (
     <div className={styles.listsWrapper}>
       {data?.data && data?.data.map((item, i) =>

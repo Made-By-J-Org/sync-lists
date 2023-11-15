@@ -2,17 +2,7 @@
   "name": "starter-vite-react",
   "private": true,
   "version": "1.0.0",
-  "description": "Opinionated Vite starter template with ESLint, Prettier, Stylelint and more.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fabgrel10/vite-react-starter"
-  },
-  "keywords": [
-    "vite",
-    "react",
-    "starter",
-    "template"
-  ],
+  "description": "XYZ @TODO",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
