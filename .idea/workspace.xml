@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d38e15a6-4d60-4391-993d-b1f1449b6d22" name="Changes" comment="stop reportWebVitals">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/static-deploy-main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/getTasksLists.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/tests/getTasksLists.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon_io/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon_io/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon_io/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon_io/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon_io/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon_io/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon_io/site.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Collapsable/Collapsable.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Collapsable/Collapsable.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Collapsable/Collapsable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Collapsable/__snapshots__/Collapsable.test.tsx.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/Container.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/Container.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/IconChevronDown.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/IconList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icons/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lists/Lists.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lists/Lists.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Loader/Loader.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Loader/Loader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProgressBar/ProgressBar.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProgressBar/ProgressBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Task/Task.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Task/Task.spec.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Task/Task.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Task/__snapshots__/Task.spec.tsx.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Task/__snapshots__/Task.test.tsx.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TasksGroup/TasksGroup.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TasksGroup/TasksGroup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/addIDsToListElements.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/calculateProgressValue.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/tests/addIDsToListElements.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/tests/calculateProgressValue.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mocks/TaskSchem.mock.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/atoms.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/helpers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="juliusz jakubowski &lt;juliusz.jakubowski@noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="CRA_main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;the-J&quot;
+  }
+}</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a935e825-7f86-45df-8b94-e271efdcf57f" />
+        <option name="url" value="https://github.com/Made-By-J-Org/sync-lists.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2YDLmtgfTcKEQvwZNzHYoqqGxXW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "JJ__main",
+    "last_opened_file_path": "/home/the-j/Documents/PROJECTS/sync-lists",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d38e15a6-4d60-4391-993d-b1f1449b6d22" name="Changes" comment="" />
+      <created>1700055366919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700055366919</updated>
+      <workItem from="1700055367935" duration="2801000" />
+      <workItem from="1700062754213" duration="1342000" />
+    </task>
+    <task id="LOCAL-00001" summary="prune all">
+      <option name="closed" value="true" />
+      <created>1700055665540</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700055665540</updated>
+    </task>
+    <task id="LOCAL-00002" summary="prune all">
+      <option name="closed" value="true" />
+      <created>1700056013733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700056013733</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create-React-App init">
+      <option name="closed" value="true" />
+      <created>1700056076955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700056076955</updated>
+    </task>
+    <task id="LOCAL-00004" summary="stop reportWebVitals">
+      <option name="closed" value="true" />
+      <created>1700056743802</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700056743802</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="prune all" />
+    <MESSAGE value="Create-React-App init" />
+    <MESSAGE value="stop reportWebVitals" />
+    <option name="LAST_COMMIT_MESSAGE" value="stop reportWebVitals" />
+  </component>
+</project>
