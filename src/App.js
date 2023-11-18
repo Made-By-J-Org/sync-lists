@@ -5,55 +5,52 @@ import { getValue } from '@testing-library/user-event/dist/utils';
 import { useRef } from "react";
 export default App;
 
-
 function App() {
 
-  // don't know what does "e" stands for and "\n"
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [gender, setGender] = useState('');
+
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  }
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleGenderChange = (e) => {
+    setGender(e.target.value);
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
-    const first = e.target.fname.value;
-    const last = e.target.lname.value;
-    console.log("First name :" + first, "\n", "Last name: " + last);
-  };
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Gender:', gender);
+  }
 
-  // dont know why isn't working line:41
-  // const App = () => {
-  //   const inputRef = useRef(null);
 
-  //   function handleClick() {
-  //     console.log(inputRef.current.value);
-  //   };
-  // };
 
 
   return (
     <React.Fragment>
-      <button>TestButton</button>
 
-      {/* Used button version */}
       <form onSubmit={handleSubmit}>
-        <input type="text" name="fname" placeholder="First name" /><br></br>
-        <input type="text" name="lname" placeholder="Last name" /><br></br>
-        <button>Submit</button>
+
+        <input type="text" name="name" placeholder='Your name' value={name} onChange={handleNameChange} />
+        <br />
+        <input type="email" name="email" placeholder="Your email" value={email} onChange={handleEmailChange} />
+        <br />
+        {/* <input type="radio" name="gender" value={male} onChange={handleGenderChange} >Male</input>
+        <input type="radio" name="gender" value={female} onChange={handleGenderChange} >Female</input> */}
+
+        <button type="submit">Submit</button>
       </form>
-
-
-      {/* Don't know why this isn't working */}
-      {/* 
-      <div>
-      <input
-        ref={inputRef}
-        type="text"
-        id="message"
-        name="message"
-      />
-
-      <button onClick={handleClick}>Log message</button>
-    </div> */}
 
       <div className="App">
         <div class="testp">
-          <p>test</p>
+          <p></p>
         </div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
