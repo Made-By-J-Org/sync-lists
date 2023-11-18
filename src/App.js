@@ -11,6 +11,11 @@ function App() {
   const [sure, setSure] = useState('');
 
 
+  // Button tests
+  // const handleButtonClick = (e) => {
+
+  // }
+
   const handleNameChange = (e) => {
     setName(e.target.value);
   }
@@ -32,8 +37,8 @@ function App() {
   //   { value: other, checked: false}
   //   ]
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleButtonClick = (e) => {
+    // e.preventDefault();
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Gender:', gender);
@@ -46,7 +51,7 @@ function App() {
   return (
     <React.Fragment>
 
-      <form onSubmit={handleSubmit}>
+      <form>
         <input type="checkbox" name="sure" checked={sure === 'yes'} value="yes" onChange={handleSureChange} />Yes <br></br>
         <input type="checkbox" name="sure" checked={sure === 'no'} value="no" onChange={handleSureChange} />No <br></br>
         <input type="text" name="name" placeholder='Your name' value={name} onChange={handleNameChange} />
@@ -56,7 +61,8 @@ function App() {
         <input type="radio" value="male" checked={gender === 'male'} onChange={handleGenderChange} />Male
         <input type="radio" value="female" checked={gender === 'female'} onChange={handleGenderChange} />Female
         <br />
-        <button type="submit">Submit</button>
+        <button type="button" onClick={handleButtonClick}>LETS DO IT</button>
+        {/* <button type="submit">Submit</button> */}
       </form>
 
       <div className="App">
