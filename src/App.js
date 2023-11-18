@@ -42,9 +42,9 @@ function App() {
         <br />
         <input type="email" name="email" placeholder="Your email" value={email} onChange={handleEmailChange} />
         <br />
-        {/* <input type="radio" name="gender" value={male} onChange={handleGenderChange} >Male</input>
-        <input type="radio" name="gender" value={female} onChange={handleGenderChange} >Female</input> */}
-
+        <input type="radio" value="male" checked={gender === 'male'} onChange={handleGenderChange} />Male
+        <input type="radio" value="female" checked={gender === 'female'} onChange={handleGenderChange} />Female
+        <br />
         <button type="submit">Submit</button>
       </form>
 
