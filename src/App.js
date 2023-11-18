@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import { getValue } from '@testing-library/user-event/dist/utils';
-import { useRef } from "react";
 export default App;
 
 function App() {
@@ -10,6 +8,7 @@ function App() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [gender, setGender] = useState('');
+  const [sure, setSure] = useState('');
 
 
   const handleNameChange = (e) => {
@@ -23,11 +22,22 @@ function App() {
   const handleGenderChange = (e) => {
     setGender(e.target.value);
   }
+  const handleSureChange = (e) => {
+    setSure(e.target.value);
+  }
+
+  // const radioValues = [
+  //   { value: male, checked: false},
+  //   { value: female, checked: false},
+  //   { value: other, checked: false}
+  //   ]
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Gender:', gender);
+    console.log('Sure', sure);
   }
 
 
@@ -37,7 +47,8 @@ function App() {
     <React.Fragment>
 
       <form onSubmit={handleSubmit}>
-
+        <input type="checkbox" name="sure" checked={sure === 'yes'} value="yes" onChange={handleSureChange} />Yes <br></br>
+        <input type="checkbox" name="sure" checked={sure === 'no'} value="no" onChange={handleSureChange} />No <br></br>
         <input type="text" name="name" placeholder='Your name' value={name} onChange={handleNameChange} />
         <br />
         <input type="email" name="email" placeholder="Your email" value={email} onChange={handleEmailChange} />
