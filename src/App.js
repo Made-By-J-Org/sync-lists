@@ -11,16 +11,16 @@ function App() {
   const [surname, setSurname] = useState('');
 
 
-  const inputFieldsGenerator = () => {
-    return inputFields.map((e) => (
-      <input name={e} />
-    ))
+  // const inputFieldsGenerator = () => {
+  //   return inputFields.map((e) => (
+  //     <input name={e} />
+  //   ))
 
-    // return (<input type={inputFields[0]} name={inputFields[1]} />)
-  }
-  const myInputs = (inputType, inputName, inputOnChange, inputClassName) => {
-    return <input type={inputType} name={inputName} onChange={inputOnChange} className={inputClassName} />
-  }
+  //   // return (<input type={inputFields[0]} name={inputFields[1]} />)
+  // }
+  // const myInputs = (inputType, inputName, inputOnChange, inputClassName) => {
+  //   return <input type={inputType} name={inputName} onChange={inputOnChange} className={inputClassName} />
+  // }
 
   const validateName = (e) => {
 
@@ -122,8 +122,8 @@ function App() {
         <button type="button" onClick={handleSubmit}>
           Submit
         </button>
-        {myInputs("text", "number", handleSubmit, "inputClassName")}
-        {inputFieldsGenerator()}
+        {/* {myInputs("text", "number", handleSubmit, "inputClassName")}
+        {inputFieldsGenerator()} */}
       </div>
 
 
