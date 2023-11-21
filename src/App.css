@@ -40,15 +40,10 @@
 
 .form  {
   /* background-color:red; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-  justify-content: space-between 10px;
-  gap: 10px;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
 }
 
-.form2 {
-  display: flex;
-  align-items: baseline;
-}
