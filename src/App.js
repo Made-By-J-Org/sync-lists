@@ -1,58 +1,84 @@
 import './App.css';
 import React, { useState } from 'react';
-import parsePhoneNumber, { PhoneNumberMatcher } from 'libphonenumber-js';
-import {
-  isPossiblePhoneNumber,
-  isValidPhoneNumber,
-  validatePhoneNumberLength
-} from 'libphonenumber-js';
 export default App;
 
 function App() {
   const emailRegex = new RegExp(
     '^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
 
+  const personalInfoRegex = new RegExp(
+    '^[a-zA-Z]'
+  );
+
 
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [agrement, setAgrement] = useState('');
+  const [isNameOk, setIsNameOk] = useState(false);
+  const [isSurnameOk, setIsSurnameOk] = useState(false);
+  // const validateEmail = (e) => {
+  //   const valueForEmail = (e.target.value);
+  //   setEmail(valueForEmail)
+  //   console.log("1", emailRegex.test(valueForEmail))
 
+  //   if (emailRegex.test(valueForEmail)) {
+  //     console.log("2", email, valueForEmail,)
+  //   } else {
+  //     console.log("change an email")
+  //   }
 
-  const validateEmail = (e) => {
-    const valueForEmail = (e.target.value);
-    setEmail(valueForEmail)
-    console.log("1", emailRegex.test(valueForEmail))
-    if (emailRegex.test(valueForEmail)) {
-      console.log("2", email, valueForEmail,)
+  // }
+  function validatePersonalInfo(personalInfo, wichOne) {
+    if (personalInfoRegex.test(personalInfo)) {
+      if (wichOne === "name") {
+        setIsNameOk(true)
+      } else {
+        setIsSurnameOk(true)
+      }
     } else {
-      console.log("change an email")
+      console.log("wrong ", wichOne)
     }
 
   }
 
+
   const handleSubmit = () => {
-    if (name.length >= 5) {
-      console.log(gender, name, surname, email)
+
+    if (name != "") {
+      validatePersonalInfo(name, "name")
     } else {
-      console.log("warrning one or more fields needs interaction")
+      console.log("warrning, name is empty")
     };
-  };
+    if (surname != "") {
+      validatePersonalInfo(surname, "surname")
+    } else {
+      console.log("warrning, Surname is empty")
+    };
+    if (gender != "") {
+      console.log(name, surname, gender, email, message, agrement)
+    } else {
+      console.log("warrning, gender is empty")
+    };
+    if (message != "") {
+      console.log(name, surname, gender, email, message, agrement)
+    } else {
+      console.log("warrning, Message is empty")
+    };
+    if (agrement != "") {
+      console.log(name, surname, gender, email, message, agrement)
+    } else {
+      console.log("warrning, agrement is empty")
+    };
+    if (email != "") {
+      console.log(name, surname, gender, email, message, agrement)
+    } else {
+      console.log("warrning, Email is empty")
+    };
+  }
 
-  // const phoneNumber = parsePhoneNumber(' 8 (800) 555-35-35 ', 'RU')
-  // // if (phoneNumber) {
-  // //   phoneNumber.country === 'RU'
-  // //   phoneNumber.number === '+78005553535'
-  // //   phoneNumber.isPossible() === true
-  // //   phoneNumber.isValid() === true
-  // //   // Note: `.getType()` requires `/max` metadata: see below for an explanation.
-  // //   phoneNumber.getType() === 'TOLL_FREE'
-  // }
-  // isPossiblePhoneNumber('8 (800) 555-35-35', 'RU') === true
-  // isValidPhoneNumber('8 (800) 555-35-35', 'RU') === true
-
-  // validatePhoneNumberLength('8 (800) 555', 'RU') === 'TOO_SHORT'
-  // validatePhoneNumberLength('8 (800) 555-35-35', 'RU') === undefined // Length is valid.
 
   return (
     <React.Fragment>
@@ -71,21 +97,25 @@ function App() {
         <br />
         <label className='preview'>Surname<br></br>
           <input type="text" name="surname" onChange={(e) => setSurname(e.target.value)} required={true} />
-
+         <br></br> <span>{!isSurnameOk && "It's wrong"}</span><br></br>
         </label> <br></br>
         <lable>Your email<br></br>
-          <input type="email" name="email" onChange={(e) => validateEmail(e)} required={true}></input>
+          <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} required={true}></input>
         </lable><br></br>
-        {/* <lable>Phone number<br></br>
-          <input type="number" name="phone" onClick={parsePhoneNumber} ></input></lable><br></br> */}
+        <label> Your Message </label><br></br>
+        <textarea rows="4" cols="18" name="message" placeholder="Enter your message here" onChange={(e) => setMessage(e.target.value)}></textarea><br></br>
+        <label>Are you agree to send this form</label><br></br>
+        <input type='checkbox' name="agrement" value="yes" onChange={(e) => setAgrement(e.target.value)} required={true}></input> i said yes <br></br>
+
         <button type="button" onClick={handleSubmit}>
           Submit
         </button>
 
       </div>
 
-
-
+      <footer>
+        Created by G.
+      </footer>
 
 
     </React.Fragment>
